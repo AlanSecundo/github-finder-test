@@ -5,11 +5,11 @@ import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GitrepoService } from './gitrepo.service';
+import { GitrepoService } from './repo-service/gitrepo.service';
 import { ListRepositoriesComponent } from './list-repositories/list-repositories.component';
 import { HomeComponent } from './home/home.component';
 import { CommonModule } from '@angular/common';
-import { SearchComponent } from './commom/search/search.component';
+import { SearchComponent } from './home/components/search/search.component';
 import { ModalComponent } from './list-repositories/components/modal/modal.component';
 
 @NgModule({

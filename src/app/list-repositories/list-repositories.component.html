@@ -2,28 +2,35 @@
   <div class="row">
     <div class="col-md-3 col-sm-12">
       <ul class="list-group menu-style">
-        <li class="list-group-item actived">Repositórios</li>
-        <li class="list-group-item" data-toggle="popover" title="Recurso indisponível" data-content="Infelizmente, a pesquisa por códigos ainda não foi implementada!">Códigos</li>
-        <li class="list-group-item" data-toggle="popover" title="Recurso indisponível" data-content="Infelizmente, a pesquisa por commits ainda não foi implementada!">Commits</li>
-        <li class="list-group-item" data-toggle="popover" title="Recurso indisponível" data-content="Infelizmente, a pesquisa por issues ainda não foi implementada!">Issues</li>
-        <li class="list-group-item" data-toggle="popover" title="Recurso indisponível" data-content="Infelizmente, a pesquisa por Usuários ainda não foi implementada!">Usuários</li>
-      </ul>
-      <br>
+        <li class="list-group-item actived" (click)="initiatePopover()">Repositórios</li>
+        <li class="list-group-item" (click)="initiatePopover()" data-toggle="popover" title="Recurso indisponível" data-content="Infelizmente, a pesquisa por códigos ainda não foi implementada!">Códigos</li>
+        <li class="list-group-item" (click)="initiatePopover()" data-toggle="popover" title="Recurso indisponível" data-content="Infelizmente, a pesquisa por commits ainda não foi implementada!">Commits</li>
+        <li class="list-group-item" (click)="initiatePopover()" data-toggle="popover" title="Recurso indisponível" data-content="Infelizmente, a pesquisa por issues ainda não foi implementada!">Issues</li>
+        <li class="list-group-item" (click)="initiatePopover()" data-toggle="popover" title="Recurso indisponível" data-content="Infelizmente, a pesquisa por Usuários ainda não foi implementada!">Usuários</li>
+      </ul><br>
     </div>
     <div class="col-md-9 col-sm-12">
       <div class="row">
         <div class="col-12">
           <div *ngIf="spinner" class="spinner-border text-dark" role="status">
           </div>
-          <div *ngIf="!spinner">
-            <h5> {{repositories.length}} repositórios listado(s) </h5>
+          <div *ngIf="!spinner && numberOfPages !== 0">
+            <h5> {{repositories?.length}} repositórios listado(s) </h5>
+          </div>
+          <div *ngIf="numberOfPages === 0">
+            <h5> Nenhum repositório encontrado</h5>
           </div>
           <hr>
         </div>
       </div>
-      <div *ngIf="spinner" class="row-center" style="padding-top: 10%;">
+      <div *ngIf="spinner" class="row-center padding-top-10">
         <div class="spinner-border text-dark" role="status">
         </div>
+      </div>
+      <div *ngIf="numberOfPages === 0" class="text-center">
+        <br><br><br>
+        <img src="../../assets/ninjaGitHub.png" width="250" alt="">
+        <p>Infelizmente, nosso amigo aqui não encontrou nenhum repositório para você.</p>
       </div>
       <div class="row" *ngIf="!spinner">
         <div *ngFor="let repo of repositories" class="col-md-6 col-sm-12 div-card">
@@ -31,7 +38,7 @@
             <div class="row">
               <div class="col-lg-3 col-md-12 column-center">
                 <img class="img" src="{{repo?.owner?.avatar_url}}" width="60" >
-                <span style="font-size: 65%; padding-top: 4%;">{{repo?.owner?.login}}</span>
+                <span class="ownerLogin">{{repo?.owner?.login}}</span>
               </div>
               <div class="col-lg-9 col-md-12">
                 <div class="row">
@@ -44,8 +51,8 @@
                   </div>
                 </div>
                 <div class="description">
-                  <p *ngIf="repo.description.length > 110">{{repo.description.substr(0, 110)}} ...</p>
-                  <p *ngIf="repo.description.length <= 110">{{repo.description}}</p>
+                  <p *ngIf="repo.description?.length > 110">{{repo.description.substr(0, 110)}} ...</p>
+                  <p *ngIf="repo.description?.length <= 110">{{repo.description}}</p>
                 </div>
               </div>
             </div>
@@ -53,7 +60,7 @@
         </div>
       </div>
       <br>
-      <div class="space-between" style="font-size: 80%;">
+      <div class="space-between" class="medium-font">
         <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-center">
             <li *ngIf="actualPage > 1" class="page-item">

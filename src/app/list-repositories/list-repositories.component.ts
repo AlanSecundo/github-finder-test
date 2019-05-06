@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { GitrepoService } from './../gitrepo.service';
+import { GitrepoService } from '../repo-service/gitrepo.service';
 import { ModalComponent } from './components/modal/modal.component';
 
 declare const $;
@@ -17,7 +17,7 @@ export class ListRepositoriesComponent implements OnInit {
   name = this.activatedRoute.snapshot.paramMap.get('name');
   page = 0;
   repo = {};
-  numberOfPages = 0
+  numberOfPages = -1
   actualPage = 1
   spinner = false
 
@@ -28,9 +28,6 @@ export class ListRepositoriesComponent implements OnInit {
    }
 
   ngOnInit() {
-    $(function () {
-      $('[data-toggle="popover"]').popover()
-    })
     this.getGitRepos(this.name, this.page)
   }
 
@@ -48,6 +45,10 @@ export class ListRepositoriesComponent implements OnInit {
       }
       this.spinner = false;
     });
+  }
+
+  initiatePopover(){
+    $('[data-toggle="popover"]').popover()
   }
 
   openModal(repository) {

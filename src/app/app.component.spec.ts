@@ -1,35 +1,26 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
+
+fdescribe('app.component.spec.ts', () => {
+
+  let fixture: ComponentFixture<AppComponent>;
+  let componentInstance;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
+      imports: [RouterTestingModule]
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    componentInstance = fixture.componentInstance;
+    fixture.detectChanges();
   }));
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'elotest'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('elotest');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to elotest!');
+  it('Componente APP deve renderizar sem nenhum erro', () => {
+    const componentInstance = fixture.componentInstance;
+    expect(componentInstance).not.toBeNull();
   });
 });

@@ -27,7 +27,19 @@
 .padding-icon{
   padding-right: 5px;
 }
-
+.no-bottom{
+  margin-bottom: 0;
+}
+.medium-font-size{
+  font-size: 80%;
+}
+.small-font-size{
+  font-size: 70%;
+}
+.description{
+  font-size: 90%;
+  color: grey;
+}
 @media screen and (max-width: 450px) {
   .private{
     font-size: 80%;

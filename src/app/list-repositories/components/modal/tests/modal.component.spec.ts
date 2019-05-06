@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalComponent } from './modal.component';
+import { ModalComponent } from '../modal.component';
 
-describe('ModalComponent', () => {
+fdescribe('modal.component.spec.ts', () => {
   let component: ModalComponent;
   let fixture: ComponentFixture<ModalComponent>;
 
@@ -11,15 +11,14 @@ describe('ModalComponent', () => {
       declarations: [ ModalComponent ]
     })
     .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(ModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('Componente MODAL deve renderizar sem nenhum erro', () => {
+    const componentInstance = fixture.componentInstance;
+    expect(componentInstance).not.toBeNull();
   });
 });

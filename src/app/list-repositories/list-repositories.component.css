@@ -43,6 +43,16 @@ li:hover {
 .div-card{
   padding: 0.3rem;
 }
+.medium-font{
+  font-size: 80%;
+}
+.padding-top-10{
+  padding-top: 10%;
+}
+.ownerLogin{
+  font-size: 65%;
+  padding-top: 4%;
+}
 .card-style{
   padding: 1rem 1rem;
   min-height: 100%;

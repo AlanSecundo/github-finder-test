@@ -1,6 +1,9 @@
 #content{
   padding: 4rem 8rem;;
 }
+.color-orange{
+  color: #ff7e2e;
+}
 .column-center{
   display: flex;
   flex-direction: column;

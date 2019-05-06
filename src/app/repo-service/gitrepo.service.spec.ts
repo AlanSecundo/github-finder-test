@@ -5,8 +5,8 @@ import { GitrepoService } from './gitrepo.service';
 describe('GitrepoService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
-    const service: GitrepoService = TestBed.get(GitrepoService);
-    expect(service).toBeTruthy();
+  it('GitService deveria ser criado ', () => {
+     const service: GitrepoService = TestBed.get(GitrepoService);
+     expect(service).toBeTruthy();
   });
 });

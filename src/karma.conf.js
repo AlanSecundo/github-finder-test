@@ -3,10 +3,17 @@
 
 module.exports = function (config) {
   config.set({
+    files: [
+      'node_modules/popper.js/dist/umd/popper.js'
+    ],
+    scripts: [
+      'node_modules/popper.js/dist/umd/popper.js'
+    ],
     basePath: '',
-    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    frameworks: ['jasmine', '@angular-devkit/build-angular', 'jquery-3.2.1'],
     plugins: [
       require('karma-jasmine'),
+      require('karma-jquery'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),

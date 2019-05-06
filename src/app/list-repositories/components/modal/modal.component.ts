@@ -1,6 +1,22 @@
 import { Component, OnInit, ElementRef, Input } from '@angular/core';
 declare const $;
 
+interface Repository {
+  name: String,
+  private: Boolean,
+  watchers_count: Number,
+  open_issues_count: Number,
+  stargazers_count: Number,
+  owner: {
+    login: String,
+    avatar_url: String
+  }
+  description: String
+  created_at: String,
+  language: String,
+  html_url: String
+ }
+
 @Component({
   selector: 'modal',
   templateUrl: './modal.component.html',
@@ -10,7 +26,7 @@ export class ModalComponent implements OnInit {
 
   modal = null;
   @Input()
-  repository: {}
+  repository: Repository;
 
   constructor(private element: ElementRef) { }
 
