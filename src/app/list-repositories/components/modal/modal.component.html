@@ -52,7 +52,8 @@
             <hr>
             <div class="row-between">
                 <span style="font-size: 70%;">Repositório criado em: {{repository?.created_at}}</span>
-                <span style="font-size: 70%;">Linguagem utilizada: {{repository?.language}}</span>
+                <span *ngIf="repository.language !== null" style="font-size: 70%;">Linguagem utilizada: {{repository?.language}}</span>
+                <span *ngIf="repository.language === null" style="font-size: 70%;">Nenhuma linguagem utilizada</span>
               </div>
           </div>
         </div>
