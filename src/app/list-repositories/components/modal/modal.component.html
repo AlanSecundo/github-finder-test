@@ -6,31 +6,31 @@
             <img class="img" src="../../../../assets/github-mini-logo.png" width="30" >
           </div>
           <div class="col-10 no-padding">
-            <h5 style="margin-bottom: 0;">Detalhes de: {{repositorie.name}}</h5>
+            <h5 style="margin-bottom: 0;">Detalhes de: {{repository?.name}}</h5>
           </div>
         </div>
         <div class="modal-body body">
           <div class="row">
             <div class="col-3">
-              <span class="private" *ngIf="repositorie.private === true">Privado</span>
-              <span class="private" *ngIf="repositorie.private === false">Público</span>
+              <span class="private" *ngIf="repository?.private === true">Privado</span>
+              <span class="private" *ngIf="repository?.private === false">Público</span>
             </div>
             <div class="col-3 text-center no-padding" style="font-size: 80%;">
               <div class="row-center">
                 <img class="padding-icon" src="../../../../assets/watcher.png" width="24">
-                <span>Watch: {{repositorie.watchers_count}}</span>
+                <span>Watch: {{repository?.watchers_count}}</span>
               </div>
             </div>
             <div class="col-3 text-center" style="font-size: 80%;">
               <div class="row-center">
                 <img class="padding-icon" src="../../../../assets/fork.png" width="24">
-                <span>Issues: {{repositorie.open_issues_count}}</span>
+                <span>Issues: {{repository?.open_issues_count}}</span>
               </div>
               </div>
               <div class="col-3 text-center" style="font-size: 80%;">
                 <div class="row-center">
                   <img class="padding-icon" src="../../../../assets/star.png" width="24">
-                  <span>Stars: {{repositorie.stargazers_count}}</span>
+                  <span>Stars: {{repository?.stargazers_count}}</span>
                 </div>
               </div>
           </div>
@@ -38,27 +38,27 @@
           <div class="row">
             <div class="col-md-3 col-sm-12 text-center">
               <p>Dono</p>
-              <img class="img" src="{{repositorie.owner?.avatar_url}}" width="90" >
-              <p>{{repositorie.owner?.login}}</p>
+              <img class="img" src="{{repository?.owner?.avatar_url}}" width="90" >
+              <p>{{repository?.owner?.login}}</p>
             </div>
             <div class="col-md-9 col-sm-12">
               <span>Descrição:</span>
               <br>
               <br>
-              <span style="font-size: 90%; color: grey;">{{repositorie.description}}</span>
+              <span style="font-size: 90%; color: grey;">{{repository?.description}}</span>
             </div>
           </div>
           <div>
             <hr>
             <div class="row-between">
-                <span style="font-size: 70%;">Repositório criado em: {{repositorie.created_at}}</span>
-                <span style="font-size: 70%;">Linguagem utilizada: {{repositorie.language}}</span>
+                <span style="font-size: 70%;">Repositório criado em: {{repository?.created_at}}</span>
+                <span style="font-size: 70%;">Linguagem utilizada: {{repository?.language}}</span>
               </div>
           </div>
         </div>
         <div class="modal-footer row-between">
           <button type="button" class="btn btn-dark" data-dismiss="modal">Fechar</button>
-          <a href="{{repositorie.html_url}}" target="_blank">Visitar repositório</a>
+          <a href="{{repository?.html_url}}" target="_blank">Visitar repositório</a>
         </div>
       </div>
     </div>

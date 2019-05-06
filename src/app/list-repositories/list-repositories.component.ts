@@ -50,8 +50,8 @@ export class ListRepositoriesComponent implements OnInit {
     });
   }
 
-  openModal(repositorie) {
-    this.repo = repositorie
+  openModal(repository) {
+    this.repo = repository
     this.newModal.show();
   }
 

@@ -10,7 +10,7 @@ export class ModalComponent implements OnInit {
 
   modal = null;
   @Input()
-  repositorie: {}
+  repository: {}
 
   constructor(private element: ElementRef) { }
 
