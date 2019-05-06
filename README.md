@@ -9,7 +9,7 @@ Teste a versão [Demo](https://github-search-test.herokuapp.com/) com o deploy j
 ## Rodando a aplicação na sua máquina
 
 Ao baixar a aplicação, rode os seguintes comandos:
-`npm Install` e depois `ng serve` Aguarde o comando ser executado e caso ele compile corretamente, se dirijá ao seu navegador e digite `http://localhost:4200/`. A aplicação irá estar de pé.
+`npm Install` e depois `ng serve`. Aguarde o comando ser executado e caso ele compile corretamente, se dirija ao seu navegador e digite `http://localhost:4200/`. A aplicação irá estar de pé nesta URL.
 
 
 ## Rodando testes unitários
@@ -18,4 +18,4 @@ Para rodar os testes unitários utilizando [Karma](https://karma-runner.github.i
 
 ## Contatos
 
-Caso precise de ajuda com algum dos itens do projeto, me contate via email: alan_secundo@hotmail.com
+Caso precise de ajuda com algum dos itens do projeto, me contate via email: alan_secundo@hotmail.com. Obrigado!
