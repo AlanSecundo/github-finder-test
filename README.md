@@ -1,27 +1,23 @@
-# Elotest
+# Elotest - github-finder-test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Este projeto foi gerado utilizando o [Angular CLI](https://github.com/angular/angular-cli) versão 7.3.8.
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Teste a versão [Demo](https://github-search-test.herokuapp.com/search/aslan) com o deploy já realizado. (*A Demo está hospedada no Heroku Free, então pode ser que o primeiro acesso demore um pouco mais até que ele fique disponível, seja paciente.)
 
-## Code scaffolding
+## Rodando a aplicação na sua máquina
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ao baixar a aplicação, rode os seguintes comandos (É necessário que o ):
+`NPM Install`
+`ng serve`
+Aguarde o comando ser executado e caso ele compile corretamente, se dirijá ao seu navegador e digite `http://localhost:4200/`. A aplicação irá estar de pé.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Rodando testes unitários
 
-## Running unit tests
+Para rodar os testes unitários utilizando [Karma](https://karma-runner.github.io). Digite no seu terminal o comando `ng test` e aguarde a execução dos mesmos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contatos
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Caso precise de ajuda com algum dos itens do projeto, me contate via email: alan_secundo@hotmail.com
