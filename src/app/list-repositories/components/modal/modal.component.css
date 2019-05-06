@@ -1,0 +1,35 @@
+.img{
+  border-radius: 100px;
+}
+.header{
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+.body{
+  padding-right: 2rem;
+}
+.row-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.no-padding{
+  padding:0;
+}
+.row-between{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.padding-icon{
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 450px) {
+  .private{
+    font-size: 80%;
+  }
+}

@@ -1,0 +1,71 @@
+#content{
+  padding: 4rem 1rem;
+  height: 100%;
+}
+.column-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.space-between{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.name-repo{
+  color: #0366d6;
+  font-size: 110%;
+  cursor: pointer;
+}
+.name-repo:hover{
+  text-decoration: underline;
+}
+.menu-style{
+  font-size: 85%;
+}
+.img{
+  border-radius: 100px;
+}
+.actived{
+  border-left: 3px rgb(194, 1, 1) solid;
+}
+li:hover {
+  background-color: rgb(233, 233, 233);
+  cursor: pointer;
+}
+.div-card{
+  padding: 0.3rem;
+}
+.card-style{
+  padding: 1rem 1rem;
+  min-height: 100%;
+  transition: all .2s ease-in-out;
+}
+.card-style:hover{
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.position{
+  text-align: left;
+}
+.description {
+  padding-top: 5px;
+  font-size: 80%;
+  color: grey;
+  text-align: left;
+}
+@media screen and (max-width: 992px) {
+  .position{
+    text-align: center;
+  }
+  .description {
+    text-align: center;
+  }
+}

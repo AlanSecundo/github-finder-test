@@ -1,0 +1,11 @@
+.btn-all{
+  width: 100%;
+  padding-bottom: 4px;
+}
+.no-padding-sides{
+  padding-left: 0;
+  padding-right: 0;
+}
+.input{
+  width: 100%;
+}
